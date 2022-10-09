@@ -20,10 +20,14 @@ test.each([
   ["8465485568", errorsList.invalidStringLengthForGTIN],
   ["84654855681", errorsList.invalidStringLengthForGTIN],
   ["846548556815868", errorsList.invalidStringLengthForGTIN],
+  [722510035005, errorsList.notString],
 ])("isValidStringLengthForGTIN invalid tests", (productCode, expectedError) => {
   expect(() => {
+    //@ts-ignore
     isValidStringLengthForGTIN(productCode, "error")
   }).toThrowError(expectedError)
+  //@ts-ignore
   expect(isValidStringLengthForGTIN(productCode)).toBe(false)
+  //@ts-ignore
   expect(isValidStringLengthForGTIN(productCode, "boolean")).toBe(false)
 })
