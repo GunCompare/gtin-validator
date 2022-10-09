@@ -12,7 +12,7 @@ test.each([
   ["0000012341238", "000012341238"],
   ["000012341238", "000012341238"],
   ["01234123412344", "1234123412344"],
-])("removeGTINLeadingZerosToUpcOrGTIN13 invalid tests", (productCode, expectedResult) => {
+])("removeGTINLeadingZerosToUpcOrGTIN13 valid tests", (productCode, expectedResult) => {
   expect(removeGTINLeadingZerosToUpcOrGTIN13(productCode)).toBe(expectedResult)
 })
 test.each([
