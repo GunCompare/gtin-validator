@@ -1,5 +1,5 @@
 {
-  "name": "@guncompare/gtin-validator",
+  "name": "gtin-validator",
   "version": "0.0.01",
   "description": "Utilities to validate and work with GTIN and UPC product codes.",
   "main": "lib/index.js",
