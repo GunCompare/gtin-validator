@@ -1,5 +1,5 @@
 {
-  "name": "gtin-lib",
+  "name": "gtinValidator",
   "version": "0.0.0",
   "description": "Validate, Compress, Expand, and generally work with & handle GTIN and UPC product codes.",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GunCompare/gtin-lib.git"
+    "url": "git+https://github.com/GunCompare/gtinValidator.git"
   },
   "keywords": [
     "gtin",
@@ -31,9 +31,9 @@
   "author": "GunCompare",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GunCompare/gtin-lib/issues"
+    "url": "https://github.com/GunCompare/gtinValidator/issues"
   },
-  "homepage": "https://github.com/GunCompare/gtin-lib#readme",
+  "homepage": "https://github.com/GunCompare/gtinValidator#readme",
   "devDependencies": {
     "@types/jest": "^29.1.2",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
