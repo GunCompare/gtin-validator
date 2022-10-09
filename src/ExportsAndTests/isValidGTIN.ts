@@ -1,4 +1,4 @@
-import { isValidCheckDigit } from "./ExportsAndTests/isValidCheckDigit"
+import { isValidCheckDigit } from "./isValidCheckDigit"
 
 /**
  * @description Determines whether the provided productCode is a valid GTIN.

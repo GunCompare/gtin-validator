@@ -1,5 +1,5 @@
 import { errorsList } from "./errorsList"
-import { isValidGTIN } from "../isValidGTIN"
+import { isValidGTIN } from "./isValidGTIN"
 
 test.each([
   "722510035005",
