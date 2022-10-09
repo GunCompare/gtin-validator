@@ -2,7 +2,7 @@ import { isValidGTIN } from "./isValidGTIN"
 import { removeGTINLeadingZerosToUpcOrGTIN13 } from "./removeGTINLeadingZerosToUpcOrGTIN13"
 
 /**
- * @description Returns the GTIN format ("GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14") of the provided productCode after removing its unnecessary leading zeros. Throws an error on an invalid GTIN.
+ * @description Returns the GTIN format ("GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14") of the provided productCode after removing its unnecessary leading zeros (runs removeGTINLeadingZerosToUpcOrGTIN13(productCode) before getting the productCode's format). Throws an error on an invalid GTIN.
  * @param productCode Valid GTIN-8, GTIN-12, GTIN-13, or GTIN-14
  * @returns "GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14"
  * @example getFormatOfMinifiedGTIN("722510035005") // returns "GTIN-12"
