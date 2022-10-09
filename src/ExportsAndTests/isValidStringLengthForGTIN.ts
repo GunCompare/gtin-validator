@@ -2,7 +2,7 @@ import { errorsList } from "./errorsList"
 import { isStringOfDigits } from "./helpersFunctions"
 
 /**
- * @description Determines whether productCode (including check digit) is a valid length for a GTIN.
+ * @description Determines whether productCode (including check digit) is a valid length for a GTIN. Does NOT check whether check digit is valid.
  * @example isValidStringLengthForGTIN("45664") //returns false
  *  isValidStringLengthForGTIN("45664", "boolean") //returns false
  * isValidStringLengthForGTIN("45664", "error") //throws error `Invalid GTIN: Valid GTINs must 8 digits or 12-14 digits.`
