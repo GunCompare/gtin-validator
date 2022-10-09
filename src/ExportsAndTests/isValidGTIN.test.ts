@@ -28,10 +28,14 @@ test.each([
   ["710882350626", errorsList.invalidCheckDigit],
   ["01012345678905", errorsList.invalidCheckDigit],
   ["5901230123457", errorsList.invalidCheckDigit],
+  [5901234123457, errorsList.notString],
 ])("isValidGTIN invalid tests", (productCode, expectedError) => {
   expect(() => {
+    //@ts-ignore
     isValidGTIN(productCode, "error")
   }).toThrowError(expectedError)
+  //@ts-ignore
   expect(isValidGTIN(productCode)).toBe(false)
+  //@ts-ignore
   expect(isValidGTIN(productCode, "boolean")).toBe(false)
 })
