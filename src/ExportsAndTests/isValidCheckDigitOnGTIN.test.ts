@@ -11,6 +11,7 @@ test.each([
   "000012341238",
   "0000012341238",
   "00000012341238",
+  "12341238",
 ])("isValidCheckDigitOnGTIN valid tests", (productCode) => {
   expect(isValidCheckDigitOnGTIN(productCode)).toBe(true)
 })
