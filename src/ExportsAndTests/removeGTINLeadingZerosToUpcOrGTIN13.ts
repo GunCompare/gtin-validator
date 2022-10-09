@@ -1,5 +1,5 @@
 import { errorsList } from "./errorsList"
-import { isValidCheckDigit } from "./isValidCheckDigit"
+import { isValidCheckDigitOnGTIN } from "./isValidCheckDigitOnGTIN"
 
 /**
  * @description Removes leading zeros in 13-14 digit productCode to return a GTIN-12/UPC or GTIN-13. Throws Error on invalid provided productCode.
@@ -23,7 +23,7 @@ import { isValidCheckDigit } from "./isValidCheckDigit"
  * removeGTINLeadingZerosToUpcOrGTIN13("84645456") //throws error "Invalid productCode provided to removeGTINLeadingZerosToUpcOrGTIN13: Only valid GTINs between 12-14 digits are accepted."
  */
 export function removeGTINLeadingZerosToUpcOrGTIN13(productCode: string) {
-  isValidCheckDigit(productCode, "error")
+  isValidCheckDigitOnGTIN(productCode, "error")
   if (/^(\d{12,14})$/.test(productCode)) {
     switch (productCode.length) {
       case 14:

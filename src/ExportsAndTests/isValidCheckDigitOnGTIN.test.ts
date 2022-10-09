@@ -1,5 +1,5 @@
 import { errorsList } from "./errorsList"
-import { isValidCheckDigit } from "./isValidCheckDigit"
+import { isValidCheckDigitOnGTIN } from "./isValidCheckDigitOnGTIN"
 
 test.each([
   "722510035005",
@@ -11,8 +11,8 @@ test.each([
   "000012341238",
   "0000012341238",
   "00000012341238",
-])("isValidCheckDigit valid tests", (productCode) => {
-  expect(isValidCheckDigit(productCode)).toBe(true)
+])("isValidCheckDigitOnGTIN valid tests", (productCode) => {
+  expect(isValidCheckDigitOnGTIN(productCode)).toBe(true)
 })
 test.each([
   ["", errorsList.emptyString],
@@ -28,10 +28,10 @@ test.each([
   ["710882350626", errorsList.invalidCheckDigit],
   ["01012345678905", errorsList.invalidCheckDigit],
   ["5901230123457", errorsList.invalidCheckDigit],
-])("isValidCheckDigit invalid tests", (productCode, expectedError) => {
+])("isValidCheckDigitOnGTIN invalid tests", (productCode, expectedError) => {
   expect(() => {
-    isValidCheckDigit(productCode, "error")
+    isValidCheckDigitOnGTIN(productCode, "error")
   }).toThrowError(expectedError)
-  expect(isValidCheckDigit(productCode)).toBe(false)
-  expect(isValidCheckDigit(productCode, "boolean")).toBe(false)
+  expect(isValidCheckDigitOnGTIN(productCode)).toBe(false)
+  expect(isValidCheckDigitOnGTIN(productCode, "boolean")).toBe(false)
 })
