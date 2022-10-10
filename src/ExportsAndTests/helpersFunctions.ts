@@ -41,3 +41,12 @@ export function isStringOfDigits(
   }
   return false
 }
+
+/**
+ * @description Randomly returns a number: 8, 12, 13, or 14
+ * @example randomGtinLength() // returns random 8,12,13,or 14. for example: //returns 12
+ * @returns
+ */
+export function randomGtinLength() {
+  return [8, 12, 13, 14][Math.floor(Math.random() * 4)]
+}
