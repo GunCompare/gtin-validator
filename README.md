@@ -148,3 +148,5 @@ getFormatOfGTIN("84656") //throws error: "Invalid GTIN: Valid GTINs must 8 digit
 getFormatOfGTIN("846548556815868") //throws error: "Invalid GTIN: Valid GTINs must 8 digits or 12-14 digits."
 getFormatOfGTIN(84658555) //throws error: "Invalid GTIN: The provided productCode is not of type string."
 ```
+
+This package was created and is maintained by the team at [GunCompare](https://guncompare.com/).
