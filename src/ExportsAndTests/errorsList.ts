@@ -9,6 +9,7 @@ export const errorsList: {
   invalidStringLengthForRemoveGTINLeadingZerosToUpcOrGTIN13: `Invalid productCode provided to removeGTINLeadingZerosToUpcOrGTIN13: Only valid GTINs between 12-14 digits are accepted.`
   invalidCheckDigit: `Invalid GTIN: GTIN check digit is invalid.`
   unknownRemoveGTINLeadingZerosToUpcOrGTIN13: "Unknown error attempting removeGTINLeadingZerosToUpcOrGTIN13 with the provided productCode."
+  invalidStringLengthForCalculateCheckDigitForGTIN: "Invalid length for the provided productCodeWithoutCheckDigit param. The productCodeWithoutCheckDigit param should be a string of digits 7 or 11-13 characters long."
 } = {
   emptyString: "Invalid GTIN: The provided productCode is an empty string.",
   notString: `Invalid GTIN: The provided productCode is not of type string.`,
@@ -19,4 +20,6 @@ export const errorsList: {
   invalidCheckDigit: `Invalid GTIN: GTIN check digit is invalid.`,
   unknownRemoveGTINLeadingZerosToUpcOrGTIN13:
     "Unknown error attempting removeGTINLeadingZerosToUpcOrGTIN13 with the provided productCode.",
+  invalidStringLengthForCalculateCheckDigitForGTIN:
+    "Invalid length for the provided productCodeWithoutCheckDigit param. The productCodeWithoutCheckDigit param should be a string of digits 7 or 11-13 characters long.",
 }

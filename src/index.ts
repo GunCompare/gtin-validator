@@ -4,6 +4,7 @@ import { removeGTINLeadingZerosToUpcOrGTIN13 } from "./ExportsAndTests/removeGTI
 import { isValidGTIN } from "./ExportsAndTests/isValidGTIN"
 import { getFormatOfGTIN } from "./ExportsAndTests/getFormatOfGTIN"
 import { getFormatOfMinifiedGTIN } from "./ExportsAndTests/getFormatOfMinifiedGTIN"
+import { calculateCheckDigitForGTIN } from "./ExportsAndTests/calculateCheckDigitForGTIN"
 
 export {
   isValidGTIN,
@@ -12,4 +13,5 @@ export {
   removeGTINLeadingZerosToUpcOrGTIN13,
   getFormatOfGTIN,
   getFormatOfMinifiedGTIN,
+  calculateCheckDigitForGTIN,
 }
