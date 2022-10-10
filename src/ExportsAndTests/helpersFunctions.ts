@@ -43,10 +43,9 @@ export function isStringOfDigits(
 }
 
 /**
- * @description Randomly returns a number: 8, 12, 13, or 14
- * @example randomGtinLength() // returns random 8,12,13,or 14. for example: //returns 12
- * @returns
+ * @description Randomly returns a string: "GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14"
+ * @example randomGtinLength() // returns a random GTIN type "GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14". for example: //returns "GTIN-12"
  */
 export function randomGtinLength() {
-  return [8, 12, 13, 14][Math.floor(Math.random() * 4)]
+  return ["GTIN-8", "GTIN-12", "GTIN-13", "GTIN-14"][Math.floor(Math.random() * 4)]
 }

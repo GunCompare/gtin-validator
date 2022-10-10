@@ -38,6 +38,6 @@ test.each([
 
 for (let i = 0; i < 100; i++) {
   test("randomGtinLength", () => {
-    expect(randomGtinLength().toString()).toMatch(/(8|12|13|14)/)
+    expect(randomGtinLength().toString()).toMatch(/(GTIN-8|GTIN-12|GTIN-13|GTIN-14)/)
   })
 }
