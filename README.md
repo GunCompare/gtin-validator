@@ -171,4 +171,21 @@ calculateCheckDigitForGTIN(1234567) //throws Error: "Invalid GTIN: The provided 
 calculateCheckDigitForGTIN(123456789012) //throws Error: "Invalid GTIN: The provided productCode is not of type string."
 ```
 
+### generateRandomGTIN(gtinType)
+
+Generates a random GTIN string, including a valid check digit of the type provided in gtinType param ("GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14").
+
+```javascript
+import { generateRandomGTIN } from "gtin-validator"
+
+generateRandomGTIN("GTIN-8") // returns random 8 character long GTIN with a valid check digit, random example: "12341238"
+generateRandomGTIN("GTIN-12") // returns random 12 character long GTIN with a valid check digit, random example: "722510035005"
+generateRandomGTIN("GTIN-13") // returns random 13 character long GTIN with a valid check digit, random example: "5901234123457"
+generateRandomGTIN("GTIN-14") // returns random 13 character long GTIN with a valid check digit, random example: "00012345678905"
+generateRandomGTIN() // throws error: gtinType param for generateRandomGTIN must be "GTIN-8", "GTIN-12", "GTIN-13", or "GTIN-14".
+generateRandomGTIN("") // throws error: gtinType param for generateRandomGTIN must be "GTIN-8", "GTIN-12", "GTIN-13", or "GTIN-14".
+generateRandomGTIN("gtin") // throws error: gtinType param for generateRandomGTIN must be "GTIN-8", "GTIN-12", "GTIN-13", or "GTIN-14".
+generateRandomGTIN("gtin-14") // throws error: gtinType param for generateRandomGTIN must be "GTIN-8", "GTIN-12", "GTIN-13", or "GTIN-14".
+```
+
 This package was created and is maintained by the team at [GunCompare](https://guncompare.com/).
