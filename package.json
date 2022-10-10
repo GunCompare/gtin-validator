@@ -1,6 +1,6 @@
 {
   "name": "gtin-validator",
-  "version": "0.0.04",
+  "version": "0.0.05",
   "description": "Utilities to validate and work with GTIN and UPC product codes.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -64,7 +64,7 @@
   "bugs": {
     "url": "https://github.com/GunCompare/gtin-validator/issues"
   },
-  "homepage": "https://github.com/GunCompare/gtin-validator#readme",
+  "homepage": "https://guncompare.com/gtin-validator-package-docs/",
   "devDependencies": {
     "@types/jest": "^29.1.2",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
