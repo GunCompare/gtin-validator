@@ -1,5 +1,5 @@
 import { errorsList } from "./errorsList"
-import { isString, isStringOfDigits, randomGtinLength } from "./helpersFunctions"
+import { isString, isStringOfDigits, randomGtinType } from "./helpersFunctions"
 
 test.each(["fasdfas", "54685486"])("isString valid tests", (productCode) => {
   expect(isString(productCode)).toBe(true)
@@ -37,7 +37,7 @@ test.each([
 })
 
 for (let i = 0; i < 100; i++) {
-  test("randomGtinLength", () => {
-    expect(randomGtinLength().toString()).toMatch(/(GTIN-8|GTIN-12|GTIN-13|GTIN-14)/)
+  test("randomGtinType", () => {
+    expect(randomGtinType().toString()).toMatch(/(GTIN-8|GTIN-12|GTIN-13|GTIN-14)/)
   })
 }

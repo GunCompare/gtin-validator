@@ -44,8 +44,15 @@ export function isStringOfDigits(
 
 /**
  * @description Randomly returns a string: "GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14"
- * @example randomGtinLength() // returns a random GTIN type "GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14". for example: //returns "GTIN-12"
+ * @example randomGtinType() // returns a random GTIN type "GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14". for example: //returns "GTIN-12"
  */
-export function randomGtinLength() {
-  return ["GTIN-8", "GTIN-12", "GTIN-13", "GTIN-14"][Math.floor(Math.random() * 4)]
+export function randomGtinType(): "GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14" {
+  let gtinTypeArray: ["GTIN-8", "GTIN-12", "GTIN-13", "GTIN-14"] = [
+    "GTIN-8",
+    "GTIN-12",
+    "GTIN-13",
+    "GTIN-14",
+  ]
+
+  return gtinTypeArray[Math.floor(Math.random() * 4)]
 }
