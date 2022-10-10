@@ -149,4 +149,26 @@ getFormatOfGTIN("846548556815868") //throws error: "Invalid GTIN: Valid GTINs mu
 getFormatOfGTIN(84658555) //throws error: "Invalid GTIN: The provided productCode is not of type string."
 ```
 
+### calculateCheckDigitForGTIN(productCodeWithoutCheckDigit)
+
+Calculates check digit for GTIN strings of digits 7 or 11-13 characters long. Valid productCodeWithoutCheckDigit params are string of digits 7 or 11-13 characters long.
+
+```javascript
+import { calculateCheckDigitForGTIN } from "gtin-validator"
+
+calculateCheckDigitForGTIN("72251003500") //returns "5"
+calculateCheckDigitForGTIN("590123412345") //returns "7"
+calculateCheckDigitForGTIN("1234123") //returns "8"
+calculateCheckDigitForGTIN("00001234123") //returns "8"
+calculateCheckDigitForGTIN("000001234123") //returns "8"
+calculateCheckDigitForGTIN("0000001234123") //returns "8"
+calculateCheckDigitForGTIN("") //throws Error: "Invalid GTIN: The provided productCode is an empty string."
+calculateCheckDigitForGTIN("123456") //throws Error: "Invalid length for the provided productCodeWithoutCheckDigit param..."
+calculateCheckDigitForGTIN("12345678") //throws Error: "Invalid length for the provided productCodeWithoutCheckDigit param..."
+calculateCheckDigitForGTIN("1234567890") //throws Error: "Invalid length for the provided productCodeWithoutCheckDigit param..."
+calculateCheckDigitForGTIN("12345678901234") //throws Error: "Invalid length for the provided productCodeWithoutCheckDigit param..."
+calculateCheckDigitForGTIN(1234567) //throws Error: "Invalid GTIN: The provided productCode is not of type string."
+calculateCheckDigitForGTIN(123456789012) //throws Error: "Invalid GTIN: The provided productCode is not of type string."
+```
+
 This package was created and is maintained by the team at [GunCompare](https://guncompare.com/).
