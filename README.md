@@ -188,4 +188,22 @@ generateRandomGTIN("gtin") // throws error: gtinType param for generateRandomGTI
 generateRandomGTIN("gtin-14") // throws error: gtinType param for generateRandomGTIN must be "GTIN-8", "GTIN-12", "GTIN-13", or "GTIN-14".
 ```
 
+### generateArrayOfRandomGTINs(gtinType, numberOfGTINsToGenerate, guaranteeOnlyUniqueGTINs)
+
+Generates an array of random GTINs of type GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14" or use "Any Valid GTIN" to potentially get a mix of different types.
+
+Use "numberOfGTINsToGenerate" param to determine how many GTINs to generate.
+
+By default, the guaranteeOnlyUniqueGTINs param is false, meaning the returned array of GTINs can contain duplicate GTINs. Pass true to guarantee each GTIN is unique, however, keep in mind this can dramatically increase the time it takes to generate the GTINs.
+
+```javascript
+import { generateArrayOfRandomGTINs } from "gtin-validator"
+
+generateArrayOfRandomGTINs("Any Valid GTIN", 1234) // returns an array of 1234 GTINs of potentially varying GTIN types. Possibly contains duplicates.
+generateArrayOfRandomGTINs("Any Valid GTIN", 1234, false) // returns an array of 1234 GTINs of potentially varying GTIN types. Possibly contains duplicates.
+generateArrayOfRandomGTINs("Any Valid GTIN", 1234, true) // returns an array of 1234 GTINs of potentially varying GTIN types. All GTINs are unique.
+generateArrayOfRandomGTINs("GTIN-12", 100000) // returns an array of 100,000 GTINs-12s. Possibly contains duplicates.
+generateArrayOfRandomGTINs("GTIN-13", 123456, true) // returns an array of 123,456 GTIN-13s. All GTINs are unique.
+```
+
 This package was created and is maintained by the team at [GunCompare](https://guncompare.com/).
