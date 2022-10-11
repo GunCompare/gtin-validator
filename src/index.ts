@@ -6,6 +6,7 @@ import { getFormatOfGTIN } from "./ExportsAndTests/getFormatOfGTIN"
 import { getFormatOfMinifiedGTIN } from "./ExportsAndTests/getFormatOfMinifiedGTIN"
 import { calculateCheckDigitForGTIN } from "./ExportsAndTests/calculateCheckDigitForGTIN"
 import { generateRandomGTIN } from "./ExportsAndTests/generateRandomGTIN"
+import { generateArrayOfRandomGTINs } from "./ExportsAndTests/generateArrayOfRandomGTINs"
 
 export {
   isValidGTIN,
@@ -16,4 +17,5 @@ export {
   getFormatOfMinifiedGTIN,
   calculateCheckDigitForGTIN,
   generateRandomGTIN,
+  generateArrayOfRandomGTINs,
 }
