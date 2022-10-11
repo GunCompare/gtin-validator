@@ -77,6 +77,12 @@ test.each([
     null,
     'guaranteeOnlyUniqueGTINs param for generateArrayOfRandomGTINs must be of type "boolean". If nothing is provided for this param, it defaults to false.',
   ],
+  [
+    "GTIN-14",
+    15,
+    "true",
+    'guaranteeOnlyUniqueGTINs param for generateArrayOfRandomGTINs must be of type "boolean". If nothing is provided for this param, it defaults to false.',
+  ],
 ])(
   "generateArrayOfRandomGTINs invalid tests",
   (gtinType, numberOfGTINsToGenerate, guaranteeOnlyUniqueGTINs, error) => {
