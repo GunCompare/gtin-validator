@@ -16,7 +16,6 @@ jobs:
           node-version: "16"
       - run: |
           npm install
-          make test-coverage
 
       - name: Tests ✅
         if: ${{ success() }}
