@@ -1,5 +1,7 @@
 # gtin-validator
 
+[![Coverage Status](https://coveralls.io/repos/github/GunCompare/gtin-validator/badge.svg?branch=main)](https://coveralls.io/github/GunCompare/gtin-validator?branch=main)
+
 gtin-validator allows you to validate and work with GTIN, UPC, and other product code formats.
 
 ```
