@@ -1,7 +1,8 @@
 # gtin-validator
 
+![npm](https://img.shields.io/npm/v/gtin-validator)
 ![build](https://github.com/GunCompare/gtin-validator/actions/workflows/node.js.yml/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/GunCompare/gtin-validator/badge.svg?branch=main)](https://coveralls.io/github/GunCompare/gtin-validator?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/GunCompare/gtin-validator/badge.svg)](https://coveralls.io/github/GunCompare/gtin-validator)
 
 gtin-validator allows you to validate and work with GTIN, UPC, and other product code formats.
 
