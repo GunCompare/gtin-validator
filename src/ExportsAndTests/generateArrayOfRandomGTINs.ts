@@ -15,7 +15,7 @@ const validGtinTypeParamsForGenerateArrayOfRandomGTINs = [
  * @description Generates an array of random GTINs of type GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14" or use "Any Valid GTIN" to potentially get a mix of different types.
  * @param gtinType "GTIN-8" | "GTIN-12" | "GTIN-13" | "GTIN-14" | "Any Valid GTIN". "Any Valid GTIN" will possibly return GTINs of all four lengths.
  * @param numberOfGTINsToGenerate The number of GTINs you want to generate.
- * @param [guaranteeOnlyUniqueGTINs] true guarantees Unique GTINs, defaults to false. Setting this to true can dramatically increase the time to generate GTINs.
+ * @param [guaranteeOnlyUniqueGTINs] true guarantees Unique GTINs, defaults to false. Setting this to true can dramatically increase the time to generate a large number of GTINs.
  * @returns array and array of GTINs.
  */
 export function generateArrayOfRandomGTINs(
@@ -49,7 +49,7 @@ export function generateArrayOfRandomGTINs(
       randomlyGeneratedArrayOfGTINs.push(randomSingleGTIN)
       r++
 
-      if (randomlyGeneratedArrayOfGTINs.length === numberOfGTINsToGenerate) {
+      if (r === numberOfGTINsToGenerate) {
         let uniqueRandomlyGeneratedArrayOfGTINs = [
           ...new Set(randomlyGeneratedArrayOfGTINs),
         ]
