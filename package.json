@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest --coverage && coveralls < coverage/lcov.info",
+    "test": "jest",
     "lint": "eslint -c .eslintrc.json -c .eslintrc.json --fix",
     "prebuild": "npm run lint",
     "build": "tsc",
