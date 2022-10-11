@@ -19,6 +19,9 @@ import {
   removeGTINLeadingZerosToUpcOrGTIN13,
   getFormatOfGTIN,
   getFormatOfMinifiedGTIN,
+  calculateCheckDigitForGTIN,
+  generateRandomGTIN,
+  generateArrayOfRandomGTINs,
 } from "gtin-validator"
 ```
 
