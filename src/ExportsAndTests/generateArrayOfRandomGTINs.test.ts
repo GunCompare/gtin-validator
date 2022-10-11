@@ -32,7 +32,7 @@ test.each([
   ["GTIN-12", 1, false],
   ["GTIN-13", 1430, false],
   ["GTIN-14", 505, false],
-  ["GTIN-8", 1234, true],
+  ["GTIN-8", 123456, true],
 ])(
   "generateArrayOfRandomGTINs valid tests",
   (gtinType, numberOfGTINsToGenerate, guaranteeOnlyUniqueGTINs) => {
