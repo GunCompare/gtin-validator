@@ -13,9 +13,8 @@ jobs:
       - name: Test using Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "16"
+          node-version: "1"
       - run: npm install
-      - run: npm test
 
       - name: Tests ✅
         if: ${{ success() }}
@@ -30,6 +29,10 @@ jobs:
             "description": "Tests passed",
             "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           }'
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Tests 🚨
         if: ${{ failure() }}
